@@ -176,3 +176,7 @@ label {
 [data-column-id="name"].rdt_TableCol {
   background-color: orange;
 }
+
+.text_link_login {
+  text-decoration-line: underline;
+}
