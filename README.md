@@ -8,3 +8,5 @@ A aplicação possui quatro páginas principais:
 - Quem sou: reponsável por apresentar a formação e a experiência do desenvolvedor;
 - Meus Produtos: onde constam os tipos de trabalhos que o desenvolvedor faz; e
 - Contato: página na qual o usuário pode se registrar ou efetuar login e acessar uma área própria para solicitar produtos ou acompanhar o andamento dos seus produtos solicitados. O registro e login são feitos por meio do recurso de login do Firebase e as solicitações de produtos são salvas no banco de dados Firestores do Firebase. Na área do usuário, o mesmo pode visualizar, editar e excluir os seus pedidos de produtos.
+
+Os campos de nome, e-mail e senha possuem validações tanto no registro do usuário quanto no login. A solicitação de um produto também possui validações.
