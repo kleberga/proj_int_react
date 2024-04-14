@@ -100,7 +100,7 @@ const Login = () => {
                         <br/>
                             {removeValidation === true && <p className="erros2">{validation}</p>}
                         </form>
-                        <p className="text-sm text-black text-left">
+                        <p className="text-sm text-black text-left" id="link_esquece">
                             <NavLink to="/recup_senha">
                                 Esqueceu a senha?
                             </NavLink>

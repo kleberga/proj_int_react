@@ -10,8 +10,8 @@ export default function Contato(){
           <img id="imgBanner" src={ContatoImage}></img>
             <div className="conteudoPaginas">
               <p >
-                Efetue <Link to="/login">login</Link>, caso já possua cadastro, 
-                ou <Link to="/registro">registre-se</Link> para verificar <br/> 
+                Efetue <Link className="link_contato" to="/login">login</Link>, caso já possua cadastro, 
+                ou <Link className="link_contato" to="/registro">registre-se</Link> para verificar <br/> 
                 a situação do seu produto ou para solicitar um produto.
               </p>
           </div>
