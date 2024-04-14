@@ -1,8 +1,12 @@
-# React + Vite
+# Aplicação de web para desenvolvedor full stack freelancer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um exemplo de aplicação web utilizada para divulgar trabalhos de desenvolvedores full stack freelancer, ou seja, desenvolvedores autônomos.
 
-Currently, two official plugins are available:
+A aplicação possui quatro páginas principais:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Home: que possui uma imagem e uma frase vinculadas ao trabalho do desenvolvedor;
+- Quem sou: reponsável por apresentar a formação e a experiência do desenvolvedor;
+- Meus Produtos: onde constam os tipos de trabalhos que o desenvolvedor faz; e
+- Contato: página na qual o usuário pode se registrar ou efetuar login e acessar uma área própria para solicitar produtos ou acompanhar o andamento dos seus produtos solicitados. O registro e login são feitos por meio do recurso de login do Firebase e as solicitações de produtos são salvas no banco de dados Firestores do Firebase. Na área do usuário, o mesmo pode visualizar, editar e excluir os seus pedidos de produtos.
+
+Os campos de nome, e-mail e senha possuem validações tanto no registro do usuário quanto no login. A solicitação de um produto também possui validações.
