@@ -20,28 +20,25 @@ No âmbito técnico, a aplicação possui as seguintes características:
 Abaixo constam imagens da aplicação em funcionamento:
 
 ![Página Home](imagem_home.png)
-
 1. Página "Home"
 
-![Página Sobre Mim](https://www.mediafire.com/view/t9eoygn59kl43wp/imagem_sobreMim.png/file)
-
+![Página Sobre Mim](imagem_sobreMim.png)
 2. Página "Sobre Mim"
 
-![Página Meus Produtos](https://www.mediafire.com/view/edvw6yubtwan3gz/imagem_MeusProd.png/file)
-
+![Página Meus Produtos](imagem_MeusProd.png)
 3. Página "Meus Produtos"
 
-![Página Contato](https://www.mediafire.com/view/cgqnufkrzalg9jp/imagem_Contato.png/file)
-
+![Página Contato](imagem_Contato.png)
 4. Página "Contato"
 
-![Página Login](https://www.mediafire.com/view/p7pr963gq2kna1e/imagem_Login.png/file)
-5. Página "Login"
+![Página Registro](imagem_Registro.png)
+5. Página "Registro"
 
-![Página do Cliente1](https://www.mediafire.com/view/u9mxw0vr0tsv1fi/imagem_Solicitar.png/file)
+![Página Login](imagem_Login.png)
+6. Página "Login"
 
-6. Página do cliente - aba "Solicitar"
+![Página do Cliente1](imagem_Solicitar.png)
+7. Página do cliente - aba "Solicitar"
 
-![Página do Cliente2](https://www.mediafire.com/view/v69gwapc8uyx0ma/imagem_Acompanhar.png/file)
-
-7. Página do cliente - aba "Acompanhar Solicitações"
+![Página do Cliente2](imagem_Acompanhar.png)
+8. Página do cliente - aba "Acompanhar Solicitações"
