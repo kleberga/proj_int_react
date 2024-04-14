@@ -22,23 +22,30 @@ Abaixo constam imagens da aplicação em funcionamento:
 1. Página "Home":
 ![Página Home](imagem_home.png)
 
+
 2. Página "Sobre Mim":
 ![Página Sobre Mim](imagem_sobreMim.png)
+
 
 3. Página "Meus Produtos":
 ![Página Meus Produtos](imagem_MeusProd.png)
 
+
 4. Página "Contato":
 ![Página Contato](imagem_Contato.png)
+
 
 5. Página "Registro":
 ![Página Registro](imagem_Registro.png)
 
+
 6. Página "Login":
 ![Página Login](imagem_Login.png)
 
+
 7. Página do cliente - aba "Solicitar":
 ![Página do Cliente1](imagem_Solicitar.png)
+
 
 8. Página do cliente - aba "Acompanhar Solicitações":
 ![Página do Cliente2](imagem_Acompanhar.png)
