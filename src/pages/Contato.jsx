@@ -1,20 +1,22 @@
 import Layout from "../Layout";
-import {
-    Button,
-    Form,
-    FormGroup,
-    Input,
-    Label
-  } from 'reactstrap';
+import { Link } from "react-router-dom";
+import ContatoImage from '../assets/images/contato3.png';
 
 export default function Contato(){
 
     return(
         <Layout children={
-          <div>
-            <p className="conteudoPaginas">Efetue <a className="text_link_login" href="http://localhost:5173/login">login</a>, caso já possua cadastro, 
-            ou <a className="text_link_login" href="http://localhost:5173/registro">registre-se</a> para verificar a situação do seu produto ou para solicitar um produto.</p>
+          <div className="gfg">
+          <img id="imgBanner" src={ContatoImage}></img>
+            <div className="conteudoPaginas">
+              <p >
+                Efetue <Link to="/login">login</Link>, caso já possua cadastro, 
+                ou <Link to="/registro">registre-se</Link> para verificar <br/> 
+                a situação do seu produto ou para solicitar um produto.
+              </p>
+          </div>
         </div>
+
     }/>
     )
 }

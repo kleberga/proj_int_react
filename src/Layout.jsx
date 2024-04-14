@@ -1,11 +1,10 @@
 import fox2 from './assets/images/fox2.jpg';
 import { Outlet, Link } from "react-router-dom";
-import { useState } from 'react';
+import Footer from "./componentes/Rodape"
+import './App.css'
 
 export default function Layout({children, menu=true, barra_login=false}){
 
-    const [usuario, setUsuario] = useState({id: "", email: "", senha: ""})
-    
     if(barra_login){
         barra_login = <h4 id="barra_esquerda">{barra_login}</h4>
     } else {
@@ -48,9 +47,9 @@ export default function Layout({children, menu=true, barra_login=false}){
             <div className="conteudo">
                 {children}
             </div>
-            <div className="page-container">
-                <footer id="footer">Desenvolvido por Fox Apps (2024)</footer>
-            </div>
+            <footer className="footer">
+                <Footer/>
+            </footer>
         </div>
     )
 }

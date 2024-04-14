@@ -1,9 +1,5 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Layout from "./Layout";
-import {BrowserRouter as Router, Route, Routes, BrowserRouter} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import SobreMin from './pages/SobreMin';
 import Home from './pages/Home';
 import MeusProdutos from './pages/MeusProdutos';
@@ -11,7 +7,8 @@ import Contato from './pages/Contato';
 import Registro from './pages/Registro'
 import Login from './pages/Login'
 import LoginEntrada from './pages/EntradaLogin'
-
+import AcompPedido from './pages/AcompPedido'
+import RecuperarSenha from './pages/RecuperarSenha'
 
 
 function App() {
@@ -27,6 +24,8 @@ function App() {
         <Route path="registro" element={<Registro />}/>
         <Route path="login" element={<Login />}/>
         <Route path="login_entrada" element={<LoginEntrada />}/>
+        <Route path="acomp_pedido" element={<AcompPedido />}/>
+        <Route path="recup_senha" element={<RecuperarSenha />}/>
         </Route>
       </Routes>
     </Router>
