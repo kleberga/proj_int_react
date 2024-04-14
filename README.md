@@ -19,8 +19,6 @@ No âmbito técnico, a aplicação possui as seguintes características:
 
 Abaixo constam imagens da aplicação em funcionamento:
 
-https://github.com/kleberga/proj_int_react/issues/1#issue-2242362203
-1. Página "Home"
 
 ![Página Sobre Mim](https://www.mediafire.com/view/t9eoygn59kl43wp/imagem_sobreMim.png/file)
 
