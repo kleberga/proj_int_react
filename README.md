@@ -19,7 +19,7 @@ No âmbito técnico, a aplicação possui as seguintes características:
 
 Abaixo constam imagens da aplicação em funcionamento:
 
-![Página Home](imagem_home.png)
+![Página Home](https://www.mediafire.com/view/ox52iq6epjdqj5f/imagem_home.png/file)
 
 1. Página "Home"
 
