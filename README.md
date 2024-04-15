@@ -1,4 +1,4 @@
-# Aplicação de web para desenvolvedor full stack freelancer
+# Aplicação web para desenvolvedor full stack freelancer
 
 Este projeto é um exemplo de aplicação web utilizada para divulgar trabalhos de desenvolvedores full stack freelancer, ou seja, desenvolvedores autônomos.
 
