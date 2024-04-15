@@ -20,7 +20,7 @@ No âmbito técnico, a aplicação possui as seguintes características:
 Abaixo constam imagens da aplicação em funcionamento:
 
 1. Página "Home":
-![Página Home](/images/imagem_home.png)
+![Página Home](imagem_home.png)
 
 
 2. Página "Sobre Mim":
