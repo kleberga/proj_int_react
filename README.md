@@ -10,6 +10,7 @@ A aplicação possui quatro páginas principais:
 - Contato: página na qual o usuário pode se registrar (ou efetuar login) e acessar uma área própria para solicitar produtos ou acompanhar o andamento dos seus produtos solicitados. Na área do usuário, o mesmo pode visualizar, editar e excluir os seus pedidos de produtos.
 
 No âmbito técnico, a aplicação possui as seguintes características:
+
 a) front-end:
 - o front-end foi construído com a biblioteca React, do Javascript, com auxílio do Vite para empacotar o aplicativo e agilizar o seu carregamento durante o desenvolvimento;
 - o registro e login são feitos por meio do recurso de login do Google Firebase;
