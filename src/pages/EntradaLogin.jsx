@@ -14,7 +14,8 @@ import { v4 as uuidv4 } from 'uuid';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditarPedido from "../componentes/EditarPedido";
-import EditIcon from '@mui/icons-material/Edit';
+import EditIcon from '@mui/icons-material/Edit'; 
+import axios from 'axios'
 
 
 export default function EntradaLogin() {
@@ -51,8 +52,15 @@ export default function EntradaLogin() {
   }
 
   async function fetchData2(){
-    const data = await fetchDataFromFirestore("pedidos");
-    setUserPedido(data);
+    var createUrl = 'http://localhost:5000/api/pedidos/' + user.uid
+    try{
+      axios.get(createUrl)
+      .then((data) => {
+          setUserPedido(data.data)
+      })
+    } catch(error){
+      console.error("Não foi possível recuperar os documentos: ", e);
+    }
   }
 
   useEffect(() => {
@@ -191,11 +199,9 @@ export default function EntradaLogin() {
       function gerarDataHora(){
         var currentDate = new Date();
         var dia = currentDate.getDate().toString();
-        console.log(currentDate)
         if(dia.length==1){
           dia = "0"+dia;
         }
-        console.log(`dia: ${dia}`)
         var month = (currentDate.getMonth()+1).toString();
         if(month.length==1){
           month = "0"+month;
@@ -214,44 +220,40 @@ export default function EntradaLogin() {
         }
         const dataHoraAtual = dia + "/" + month + "/" + currentDate.getFullYear() + " - " + hora + ":" 
         + minutos + ":" + segundos;
-
-        console.log(`dataHoraAtual: ${dataHoraAtual}`)
-
         return dataHoraAtual;
       }
 
       async function onPedido(dados)  {
-          var dataHoraAtual = gerarDataHora();
-            var novoPedido = {
-              id_doc: uuidv4(),
-              data: dataHoraAtual,
-              id: user.uid,
-              produto: produto,
-              descricao: descricao,
-              situacao: "Entrarei em contato por e-mail para discutirmos a sua solicitação",
-              createdAt: serverTimestamp(),
-              lastUpdate: serverTimestamp()
-            }
-            try {
-              const pedidoRef = doc(colletionRef, novoPedido.id_doc);
-              await setDoc(pedidoRef, novoPedido);
+        var dataHoraAtual = gerarDataHora();
+          var novoPedido = {
+            id_doc: uuidv4(),
+            data: dataHoraAtual,
+            id: user.uid,
+            produto: produto,
+            descricao: descricao,
+            situacao: "Entrarei em contato por e-mail para discutirmos a sua solicitação",
+            createdAt: dataHoraAtual,
+            lastUpdate: dataHoraAtual
+          }
+          try {
+            const requestOptions = {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(novoPedido)
+            };
+            fetch('http://localhost:5000/api/novo', requestOptions)
+              .then(response => response.status);
               reset();
               fetchData2();
               setSubmitSuccess(true)
-            } catch (e) {
-              console.error("Error adding document: ", e);
-            }  
-      };
+          } catch (e) {
+            console.error("Error adding document: ", e);
+          }
+    };
 
-
-      async function deletarPedido(pedidoUid){
-        try {
-          const pedidoRef = doc(colletionRef, pedidoUid);
-          await deleteDoc(pedidoRef, pedidoRef);
-          fetchData2();
-        } catch (error) {
-          console.error(error);
-        }
+       async function deletarPedido(pedidoUid){
+        axios.delete('http://localhost:5000/api/delete/'+pedidoUid)
+        fetchData2();
       };
 
       function updatePedido(linha){
@@ -273,12 +275,12 @@ export default function EntradaLogin() {
           descricao: descricao,
           situacao: situacaoEditada,
           createdAt: createdAtEditada,
-          lastUpdate: serverTimestamp()
+          lastUpdate: dataHoraAtual
         }
         console.log(pedidoUid);
+
         try {
-          const pedidoRef = doc(colletionRef, pedidoUid);
-          await updateDoc(pedidoRef, pedidoAlterado);
+          axios.put('http://localhost:5000/api/pedido/'+pedidoUid, pedidoAlterado)
         } catch (error) {
           console.error(error);
         }

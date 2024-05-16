@@ -8,15 +8,17 @@ import LoginImage from '../assets/images/login2.png';
 import Button from 'react-bootstrap/Button';
 import { collection, addDoc } from "firebase/firestore";
 import {db} from '../infra/firebase';
+import axios from 'axios'
 
 
 const Signup = () => {
   const navigate = useNavigate();
 
   const [nome, setNome] = useState('');
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [removeErro, setRemoveErro] = useState(false);
+
 
   const onSubmit = async (e) => {
    
@@ -43,6 +45,7 @@ const Signup = () => {
           console.log(errorCode);
       });
   }
+
 
   const {
     register,
