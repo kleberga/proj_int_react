@@ -52,7 +52,7 @@ export default function EntradaLogin() {
   }
 
   async function fetchData2(){
-    var createUrl = 'http://localhost:5000/api/pedidos/' + user.uid
+    var createUrl = 'http://localhost:4000/api/pedidos/' + user.uid
     try{
       axios.get(createUrl)
       .then((data) => {
